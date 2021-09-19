@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="onLoad()" class="flex-center">
+
+    <div id="container">
+
+        <div class="stats-1">
+            <div class="weather-stats">
+                <h2 class="city-title"></h2>
+                <p class="time"></p>
+                <h1 class="temperature"></h1>
+                <div class="temp-minmax">
+                    <p class="temp-minmax__max"></p>
+                    <p class="temp-minmax__min"></p>
+                </div>
+            </div>
+
+            <div class="moon-container">
+                <lottie-player class="sun" src="https://assets5.lottiefiles.com/packages/lf20_xlky4kvh.json"
+                    background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
+                </lottie-player>
+                <lottie-player class="moon" src="https://assets9.lottiefiles.com/packages/lf20_tzsp7edq.json"
+                    background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
+                </lottie-player>
+            </div>
+
+        </div>
+
+        <div class="stats-2">
+            <div class="humidity">
+                <h3>Humidity</h3>
+                <p class="humidity_percentage">90%</p>
+            </div>
+            <div class="wind">
+                <h3>Wind</h3>
+                <div class="wind-stats">
+                    <div class="circle">
+                        <div class="triangle"></div>
+                    </div>
+                    <p class="wind_velocity"></p>
+                </div>
+
+            </div>
+            <div class="date">
+                <h3>Date</h3>
+                <p class="date_now">12/12/2021</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div id="loader" class="loader"></div> -->
+
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

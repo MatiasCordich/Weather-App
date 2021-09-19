@@ -1,0 +1,148 @@
+:root{
+    --white: #ffffff;
+    --red: #ff0000;
+    --blue: #112031;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--blue);
+    min-height: 100%;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+
+html{
+    height: 100%;
+    font-size: 62.5%;
+}
+
+#container{
+    max-width: 130rem;
+    height: 60rem;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 2rem;
+}
+
+.moon,
+.sun{
+    display: none;
+}
+
+
+.stats-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 60%;
+}
+
+.moon-container{
+    width: 30%;
+}
+.weather-stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 70%;
+    height: 100%;
+    padding: 3rem;
+
+}
+
+.moon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-title{
+    font-size: 7rem;
+    letter-spacing: .8rem;
+}
+
+.time{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .4rem;
+}
+
+.temperature {
+    font-size: 10rem;
+    font-weight: 200;
+}
+
+.temp-minmax{
+    display: flex;
+    gap: 2rem;
+    font-size: 2.5rem;
+    letter-spacing: .4rem;
+}
+
+.stats-2{
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+}
+
+.stats-2 > * {
+    height: 100%;
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.humidity h3,
+.wind h3,
+.date h3{
+    font-size: 3rem;
+    letter-spacing: .4rem;
+    font-weight: 300;
+}
+
+.humidity p,
+.wind p,
+.date p{
+    font-size: 3.5rem;
+    letter-spacing: .5rem;
+    font-weight: 300;
+}
+
+.wind-stats{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.circle{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle{
+    border-style: solid;
+    border-width: 0 6px 25px 6px;
+    border-color: transparent transparent var(--red)  transparent;
+}
