@@ -15,6 +15,8 @@ const getWeather = async (position) => {
 
         const data = await res.json()
 
+        console.log(data)
+
         const clima = {
             ciudad: data.name,
             fecha: getFecha(),
@@ -26,8 +28,14 @@ const getWeather = async (position) => {
             viento:{
               velocidad: parseFloat(data.wind.speed * 1.60934).toFixed(1),
               direccion: data.wind.deg  
-            } 
+            },
+            simple: {
+                descripcion: data.weather[0].main,
+                icono: data.weather[0].icon
+            }
         }
+
+        console.log(clima)
 
         showDatos(clima)
 
@@ -70,7 +78,7 @@ const showDatos = (clima) =>{
     title.innerText = clima.ciudad
 
     const time = document.querySelector('.time')
-    time.innerText = clima.hora >= '8 : 00' || clima.hora <= '18 : 00' ? 'Day' : 'Night'
+    time.innerText = `${clima.hora >= '8 : 00' || clima.hora <= '18 : 00' ? 'Day' : 'Night'} - ${clima.simple.descripcion}`
 
     const temperature = document.querySelector('.temperature')
     temperature.innerText =  `${clima.temperatura}°`
