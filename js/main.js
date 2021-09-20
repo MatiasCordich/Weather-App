@@ -15,8 +15,6 @@ const getWeather = async (position) => {
 
         const data = await res.json()
 
-        console.log(data)
-
         const clima = {
             ciudad: data.name,
             fecha: getFecha(),
@@ -70,7 +68,6 @@ const getHora = () => {
 
 const showDatos = (clima) =>{
 
-
     const fecha = document.querySelector('.date_now')
     fecha.innerText = clima.fecha
 
@@ -95,25 +92,8 @@ const showDatos = (clima) =>{
     windSpeed.innerText = `${clima.viento.velocidad} km/h`
 
     const windDirection = document.querySelector('.triangle')
-
-    if (clima.viento.direccion === 0 || clima.viento.direccion <= 45) {
-        windDirection.style.transform = 'rotate(45deg)'
-    } else if (clima.viento.direccion >= 46 || clima.viento.direccion <= 90) {
-        windDirection.style.transform = 'rotate(90deg)'
-    } else if (clima.viento.direccion >= 91 || clima.viento.direccion <= 135) {
-        windDirection.style.transform = 'rotate(135deg)'
-    } else if (clima.viento.direccion >= 136 || clima.viento.direccion <= 180) {
-        windDirection.style.transform = 'rotate(180deg)'
-    } else if (clima.viento.direccion >= 181 || clima.viento.direccion <= 225) {
-        windDirection.style.transform = 'rotate(225deg)'
-    }else if (clima.viento.direccion >= 226 || clima.viento.direccion <= 270) {
-        windDirection.style.transform = 'rotate(270deg)'
-    }else if (clima.viento.direccion >= 271 || clima.viento.direccion <= 315) {
-        windDirection.style.transform = 'rotate(315deg)'
-    } else if (clima.viento.direccion >= 316 || clima.viento.direccion <= 360) {
-        windDirection.style.transform = 'rotate(360deg)'
-    }
-
+    windDirection.style.transform = `rotate(${clima.viento.direccion}deg)`
+    
     const moon = document.querySelector('.moon')
     const sun = document.querySelector('.sun')
 
@@ -123,6 +103,15 @@ const showDatos = (clima) =>{
         moon.style.display = 'block'
     }
 
+    cleanUp()
 
+}
+
+const cleanUp = () =>{
+    const container = document.getElementById('container')
+    const loader = document.getElementById('loader')
+
+    loader.style.display = 'none'
+    container.style.display = 'block'
 }
 
