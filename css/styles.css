@@ -101,7 +101,8 @@ html{
 }
 
 .moon,
-.sun{
+.sun,
+.sundown{
     display: none;
 }
 

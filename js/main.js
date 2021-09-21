@@ -75,7 +75,7 @@ const showDatos = (clima) =>{
     title.innerText = clima.ciudad
 
     const time = document.querySelector('.time')
-    time.innerText = `${clima.hora >= '8 : 00' || clima.hora <= '18 : 00' ? 'Day' : 'Night'} - ${clima.simple.descripcion}`
+    time.innerText = `${clima.hora >= '8 : 00' || clima.hora <= '18 : 00' ? 'Day' : clima.hora >= '17 : 00' || clima.hora <= '19 : 00' ? 'Sundown' : 'Night'} - ${clima.simple.descripcion}`
 
     const temperature = document.querySelector('.temperature')
     temperature.innerText =  `${clima.temperatura}°`
@@ -95,10 +95,13 @@ const showDatos = (clima) =>{
     windDirection.style.transform = `rotate(${clima.viento.direccion}deg)`
     
     const moon = document.querySelector('.moon')
+    const sundown = document.querySelector('.sundown')
     const sun = document.querySelector('.sun')
 
-    if (clima.hora >= '8 : 00' || clima.hora <= '18 : 00') {
+    if (clima.hora >= '8 : 00' || clima.hora <= '16 : 00') {
         sun.style.display = 'block'
+    } else if (clima.hora >= '17 : 00' || clima.hora <= '19 : 00'){
+        sundown.style.display = 'block'
     } else {
         moon.style.display = 'block'
     }
