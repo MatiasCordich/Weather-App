@@ -67,7 +67,7 @@ html{
   content: '';
 }
 .loader:after {
-  background: var(--blue);
+  background-color: var(--blue);
   width: 75%;
   height: 75%;
   border-radius: 50%;

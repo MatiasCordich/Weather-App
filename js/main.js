@@ -126,8 +126,13 @@ const showDatos = (clima) =>{
         mooncloud.style.display = 'block'
     }
 
-    cleanUp()
+    const mainContainer = document.querySelector('.main-container')
 
+    if (clima.hora >= '20 : 00' && clima.hora <= '7 : 00') {
+        mainContainer.style.backgroundColor = '#171717'
+    }
+
+    cleanUp()
 }
 
 const cleanUp = () =>{
@@ -136,5 +141,6 @@ const cleanUp = () =>{
 
     loader.style.display = 'none'
     container.style.display = 'block'
+   
 }
 
