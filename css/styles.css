@@ -101,8 +101,14 @@ html{
 }
 
 .moon,
+.mooncloud,
 .sun,
-.sundown{
+.rain,
+.clouds,
+.suncloud,
+.snow,
+.fog,
+.thunderstorm{
     display: none;
 }
 
@@ -110,13 +116,17 @@ html{
 .stats-1{
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     height: 60%;
 }
 
-.moon-container{
+.weather-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30%;
+    height: 100%;
 }
 .weather-stats{
     display: flex;
