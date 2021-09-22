@@ -75,7 +75,7 @@ const showDatos = (clima) =>{
     title.innerText = clima.ciudad
 
     const time = document.querySelector('.time')
-    time.innerText = `${clima.hora >= '8 : 00' || clima.hora <= '18 : 00' ? 'Day' : clima.hora >= '17 : 00' || clima.hora <= '19 : 00' ? 'Sundown' : 'Night'} - ${clima.simple.descripcion}`
+    time.innerText = `${clima.hora >= '8 : 00' && clima.hora <= '18 : 00' ? 'Day' : clima.hora >= '17 : 00' && clima.hora <= '19 : 00' ? 'Sundown' : 'Night'} - ${clima.simple.descripcion}`
 
     const temperature = document.querySelector('.temperature')
     temperature.innerText =  `${clima.temperatura}°`
