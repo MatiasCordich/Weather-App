@@ -75,7 +75,7 @@ const showDatos = (clima) =>{
     title.innerText = clima.ciudad
 
     const time = document.querySelector('.time')
-    time.innerText = `${clima.hora >= '8 : 00' && clima.hora <= '18 : 00' ? 'Day' : clima.hora >= '17 : 00' && clima.hora <= '19 : 00' ? 'Sundown' : 'Night'} - ${clima.simple.descripcion}`
+    time.innerText = `${clima.hora >= '8 : 00' || clima.hora <= '19 : 00' ? 'Day' : 'Night'} - ${clima.simple.descripcion}`
 
     const temperature = document.querySelector('.temperature')
     temperature.innerText =  `${clima.temperatura}°`
@@ -120,9 +120,9 @@ const showDatos = (clima) =>{
         snow.style.display = 'block'
     } else if (clima.simple.id >= 701 && clima.simple.id <= 781) {
         fog.style.display = 'block'
-    } else if (clima.hora >= '20 : 00' && clima.hora <= '7 : 00' && clima.simple.id === 800) {
+    } else if (clima.hora >= '20 : 00' || clima.hora <= '7 : 00' && clima.simple.id === 800) {
         moon.style.display = 'block'
-    } else if (clima.hora >= '20 : 00' && clima.hora <= '7 : 00' && clima.simple.id === 801) {
+    } else if (clima.hora >= '20 : 00' || clima.hora <= '7 : 00' && clima.simple.id === 801) {
         mooncloud.style.display = 'block'
     }
 
