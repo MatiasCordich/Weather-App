@@ -7,11 +7,14 @@
         align-items: center;
         flex-direction: column;
         gap: 2rem;
+        display: none;
     }
 
     .stats-1{
         flex-direction: column-reverse;
         padding: 1rem;
+        width: 95%;
+        margin: 0 auto;
     }
 
     .weather-stats{
@@ -28,8 +31,13 @@
         font-size: 4rem;
     }
 
-    .moon-container{
-        width: 100%;
+    .temp-minmax{
+        display: flex;
+        justify-content: center;
+    }
+
+    .weather-container{
+        width: 95%;
     }
 
     .stats-2{
@@ -81,6 +89,7 @@
         align-items: center;
         flex-direction: column;
         gap: 2rem;
+        display: none;
     }
 
     .stats-1 > * {
