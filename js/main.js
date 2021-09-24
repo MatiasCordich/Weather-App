@@ -110,19 +110,19 @@ const showDatos = (clima) =>{
         sun.style.display = 'block'
     } else if (clima.hora >= '8 : 00' && clima.hora <= '19 : 00' && clima.simple.id === 801){
         suncloud.style.display = 'block'
-    } else if (clima.simple.id >= 802 && clima.simple.id <= 804) {
+    } else if (clima.simple.id >= 802 || clima.simple.id <= 804) {
         clouds.style.display = 'block'
-    } else if (clima.simple.id >= 500 && clima.simple.id <= 531) {
+    } else if (clima.simple.id >= 500 || clima.simple.id <= 531) {
         rain.style.display = 'block'
-    } else if (clima.simple.id >= 200 && clima.simple.id <= 232) {
+    } else if (clima.simple.id >= 200 || clima.simple.id <= 232) {
         thunderstorm.style.display = 'block'
-    } else if (clima.simple.id >= 600 && clima.simple.id <= 622) {
+    } else if (clima.simple.id >= 600 || clima.simple.id <= 622) {
         snow.style.display = 'block'
-    } else if (clima.simple.id >= 701 && clima.simple.id <= 781) {
+    } else if (clima.simple.id >= 701 || clima.simple.id <= 781) {
         fog.style.display = 'block'
-    } else if (clima.hora >= '20 : 00' || clima.hora <= '7 : 00' && clima.simple.id === 800) {
+    } else if (clima.hora >= '20 : 00' && clima.hora <= '7 : 00' && clima.simple.id === 800) {
         moon.style.display = 'block'
-    } else if (clima.hora >= '20 : 00' || clima.hora <= '7 : 00' && clima.simple.id === 801) {
+    } else if (clima.hora >= '20 : 00' && clima.hora <= '7 : 00' && clima.simple.id === 801) {
         mooncloud.style.display = 'block'
     }
 
